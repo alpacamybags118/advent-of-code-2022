@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+if [ -z $1 ]; then
+  echo "day to create not provided"
+  exit 1
+fi
+
+DAY="day$1"
+
+cp -R ./src/template ./src/$DAY

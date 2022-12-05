@@ -1,0 +1,31 @@
+#! /usr/bin/env bash
+declare USESAMPLE=false
+declare PART
+declare DAY
+declare ARGLIST
+
+while [ $# -gt 0 ] ; do
+  case $1 in
+    --use-sample) USESAMPLE=true ;;
+    --part) PART="$2" ;;
+    --day) DAY="$2" ;;
+  esac
+  shift
+done
+
+if [ -z $DAY ]; then
+  echo "Day to run must be provided."
+  exit 1
+fi
+
+if [ $USESAMPLE ]; then
+  ARGLIST="--use-sample"
+fi
+
+if [ ! -z $PART ]; then
+  ARGLIST="$ARGLIST --part $PART"
+fi
+
+cd ./src/day$DAY
+
+go run main.go $ARGLIST
