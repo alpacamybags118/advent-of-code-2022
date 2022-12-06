@@ -18,7 +18,7 @@ if [ -z $DAY ]; then
   exit 1
 fi
 
-if [ $USESAMPLE ]; then
+if [ $USESAMPLE == true ]; then
   ARGLIST="--use-sample"
 fi
 
