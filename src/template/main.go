@@ -1,7 +1,7 @@
 package main
 
 import (
-	helpers "advent-of-code-2022/src/lib"
+	helpers "advent-of-code-2022/src/helpers"
 	"flag"
 	"fmt"
 )

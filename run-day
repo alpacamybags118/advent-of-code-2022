@@ -28,4 +28,4 @@ fi
 
 cd ./src/day$DAY
 
-go run main.go $ARGLIST
+GO111MODULE=on; go run main.go $ARGLIST
